@@ -17,6 +17,7 @@ pipeline {
                     sh 'echo "Is going to reverse the string artifact"'
                     sh 'pwd'
                     sh 'ls'
+                    sh 'ls Artifacts/'
                     sh 'cd Artifacts'
                     sh 'bash reverse_artifact.sh "`cat hw.txt`"'
                 }
