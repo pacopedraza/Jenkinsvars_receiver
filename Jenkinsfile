@@ -5,7 +5,7 @@ pipeline {
          steps {
              script {
                  step ([$class: 'CopyArtifact',
-                 projectName: 'e2e_pip',
+                 projectName: '../End to End Testing/e2e_pip',
                  filter: "hw.sh",
                  target: 'Artifacts']);
              }
