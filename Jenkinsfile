@@ -1,6 +1,6 @@
 #!groovy
 pipeline {
-        agent any
+        agent { node {label 'ecs' } }
         stages {
             stage('Copy Archive') {
                 steps {
