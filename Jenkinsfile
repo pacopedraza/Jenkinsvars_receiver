@@ -14,8 +14,8 @@ pipeline {
             }
             stage('Use Artifact'){
                 steps {
-                sh "pwd"
-                sh "ls"
+                    sh 'echo "Is going to reverse the string artifact"'
+                    sh 'echo "Artifacts/hw.sh" | rev
                 }
             }
         }
