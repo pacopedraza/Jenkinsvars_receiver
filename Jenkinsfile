@@ -19,7 +19,7 @@ pipeline {
                     sh 'ls'
                     sh 'cd Artifacts/'
                     sh 'ls'
-                    sh 'bash reverse_artifact.sh "`cat hw.sh`"'
+                    sh 'bash reverse_artifact.sh "`cat Artifacts/hw.sh`"'
                 }
             }
         }
