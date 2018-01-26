@@ -13,8 +13,10 @@ pipeline {
                 }
             }
             stage('Use Artifact'){
-               sh "pwd"
-               sh "ls"
+                steps {
+                sh "pwd"
+                sh "ls"
+                }
             }
         }
 }
