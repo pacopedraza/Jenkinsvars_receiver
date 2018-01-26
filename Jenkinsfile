@@ -1,6 +1,5 @@
 #!groovy
 pipeline {
-    node('ecs'){
         stages {
             stage('Copy Archive') {
                 steps {
@@ -13,5 +12,4 @@ pipeline {
                 }
             }
         }
-    }
 }
