@@ -2,7 +2,7 @@
 pipeline {
         agent { node {label 'ecs' } }
         stages {
-            stage('Copy Archive') {
+            stage('Copy Artifact from previous job') {
                 steps {
                     script {
                         step ([$class: 'CopyArtifact',
@@ -11,6 +11,10 @@ pipeline {
                         target: 'Artifacts']);
                     }
                 }
+            }
+            stage('Use Artifact'){
+               sh "pwd"
+               sh "ls"
             }
         }
 }
