@@ -18,7 +18,7 @@ pipeline {
                     sh 'pwd'
                     sh 'ls'
                     sh 'cd Artifacts'
-                    sh 'bash reverse_artifact.sh hw.txt'
+                    sh 'bash reverse_artifact.sh "`cat hw.txt`"'
                 }
             }
         }
