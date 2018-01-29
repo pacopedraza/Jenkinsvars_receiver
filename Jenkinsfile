@@ -7,7 +7,7 @@ pipeline {
                     script {
                         step ([$class: 'CopyArtifact',
                         projectName: 'e2e_pip',
-                        filter: "hw.txt",
+                        filter: "hw.sh",
                         target: 'Artifacts']);
                     }
                 }
@@ -19,7 +19,7 @@ pipeline {
                     sh 'ls'
                     sh 'cd Artifacts/'
                     sh 'ls'
-                    sh 'bash reverse_artifact.sh "`cat Artifacts/hw.txt`"'
+                    sh 'bash reverse_artifact.sh "`cat Artifacts/hw.sh`"'
                 }
             }
         }
